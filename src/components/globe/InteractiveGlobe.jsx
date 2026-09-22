@@ -15,6 +15,10 @@ import {
 } from '@react-three/fiber';
 
 import {
+  Stars,
+} from '@react-three/drei';
+
+import {
   OrbitControls as ThreeOrbitControls,
 } from 'three/examples/jsm/controls/OrbitControls.js';
 
@@ -301,7 +305,6 @@ const GlobeScene = ({
   const {
     camera,
     gl,
-    invalidate,
   } = useThree();
 
   /* =======================================================
@@ -331,10 +334,11 @@ const GlobeScene = ({
     controls.enableRotate =
       true;
 
-    // Performance-first: disable damping so we do not need
-    // a continuous render loop while the globe is idle.
     controls.enableDamping =
-      false;
+      true;
+
+    controls.dampingFactor =
+      0.055;
 
     controls.rotateSpeed =
       0.48;
@@ -377,8 +381,6 @@ const GlobeScene = ({
           ?.setPointOfView?.(
             camera
           );
-
-        invalidate();
       };
 
     controls.addEventListener(
@@ -431,7 +433,6 @@ const GlobeScene = ({
     camera,
     gl,
     onInteractionChange,
-    invalidate,
   ]);
 
   /* =======================================================
@@ -724,7 +725,6 @@ const GlobeScene = ({
       );
 
     setFlying(true);
-    invalidate();
 
     if (
       controlsRef.current
@@ -742,7 +742,6 @@ const GlobeScene = ({
     globeReady,
     activeCountry,
     onInteractionChange,
-    invalidate,
   ]);
 
   /* =======================================================
@@ -750,6 +749,20 @@ const GlobeScene = ({
      ======================================================= */
 
   useFrame(() => {
+    /*
+     * OrbitControls damping
+     * requires update()
+     * while idle / interacting.
+     */
+
+    if (
+      controlsRef.current &&
+      !flying
+    ) {
+      controlsRef.current
+        .update();
+    }
+
     if (
       !flyTargetRef.current ||
       !flying
@@ -761,7 +774,7 @@ const GlobeScene = ({
       flyTargetRef.current,
       reducedMotion
         ? 1
-        : 0.11
+        : 0.075
     );
 
     camera.lookAt(
@@ -783,7 +796,7 @@ const GlobeScene = ({
 
     if (
       distance <
-      0.45
+      0.35
     ) {
       camera.position.copy(
         flyTargetRef.current
@@ -810,13 +823,7 @@ const GlobeScene = ({
       onInteractionChange?.(
         false
       );
-
-      invalidate();
-      return;
     }
-
-    // In demand mode, request only the next fly-to frame.
-    invalidate();
   });
 
   /* =======================================================
@@ -1001,6 +1008,18 @@ const GlobeScene = ({
         }
         color="#22d3ee"
       />
+
+      {/* Reduced from 1200 to 350 for performance */}
+      <Stars
+       radius={300}
+  depth={50}
+  count={180}
+  factor={1.5}
+  saturation={0.2}
+  fade
+  speed={0}
+      />
+
       <R3fGlobe
         ref={
           globeRef
@@ -1136,7 +1155,11 @@ const GlobeScene = ({
           return 0.007;
         }}
 
-        polygonsTransitionDuration={0}
+        polygonsTransitionDuration={
+          reducedMotion
+            ? 0
+            : 320
+        }
 
         pointsData={
           pointsData
@@ -1171,11 +1194,19 @@ const GlobeScene = ({
               : 0.48
         }
 
-        pointResolution={8}
+        pointResolution={
+          12
+        }
 
-        pointsTransitionDuration={0}
+        pointsTransitionDuration={
+          reducedMotion
+            ? 0
+            : 550
+        }
 
-        ringsData={[]}
+        ringsData={
+          ringsData
+        }
 
         ringLat="lat"
 
@@ -1200,9 +1231,17 @@ const GlobeScene = ({
           4.4
         }
 
-        ringPropagationSpeed={0}
+        ringPropagationSpeed={
+          reducedMotion
+            ? 0
+            : 1.55
+        }
 
-        ringRepeatPeriod={0}
+        ringRepeatPeriod={
+          reducedMotion
+            ? 0
+            : 1250
+        }
 
         arcsData={
           arcsData
@@ -1234,11 +1273,24 @@ const GlobeScene = ({
           0.12
         }
 
-        arcDashInitialGap={0}
+        arcDashInitialGap={
+          reducedMotion
+            ? 0
+            : () =>
+                Math.random()
+        }
 
-        arcDashAnimateTime={0}
+        arcDashAnimateTime={
+          reducedMotion
+            ? 0
+            : 1700
+        }
 
-        arcsTransitionDuration={0}
+        arcsTransitionDuration={
+          reducedMotion
+            ? 0
+            : 650
+        }
 
         labelsData={
           labelsData
@@ -1273,7 +1325,11 @@ const GlobeScene = ({
 
         labelDotOrientation="bottom"
 
-        labelsTransitionDuration={0}
+        labelsTransitionDuration={
+          reducedMotion
+            ? 0
+            : 450
+        }
 
         showGlobe
 
@@ -1291,7 +1347,9 @@ const GlobeScene = ({
           0.17
         }
 
-        globeCurvatureResolution={10}
+        globeCurvatureResolution={
+          5
+        }
 
         onHover={
           handleHover
@@ -1393,14 +1451,15 @@ const CountryDetailCard = ({
         border-white/10
         bg-white/[0.055]
         p-6
-        shadow-[0_14px_45px_rgba(0,0,0,0.24)]
-        backdrop-blur-sm
+        shadow-[0_18px_70px_rgba(0,0,0,0.28)]
+        backdrop-blur-2xl
 
         sm:p-7
       "
     >
-      <div
+      <motion.div
         aria-hidden="true"
+
         className="
           pointer-events-none
           absolute
@@ -1410,8 +1469,37 @@ const CountryDetailCard = ({
           w-56
           rounded-full
           bg-cyan-400/10
-          blur-[60px]
+          blur-[90px]
         "
+
+        animate={
+          reducedMotion
+            ? undefined
+            : {
+                scale: [
+                  1,
+                  1.12,
+                  1,
+                ],
+
+                opacity: [
+                  0.55,
+                  0.8,
+                  0.55,
+                ],
+              }
+        }
+
+        transition={{
+          duration:
+            5,
+
+          repeat:
+            Infinity,
+
+          ease:
+            'easeInOut',
+        }}
       />
 
       <div
@@ -1523,7 +1611,30 @@ const CountryDetailCard = ({
             </p>
           </div>
 
-          <span
+          <motion.span
+            animate={
+              reducedMotion
+                ? undefined
+                : {
+                    y: [
+                      0,
+                      -4,
+                      0,
+                    ],
+                  }
+            }
+
+            transition={{
+              duration:
+                3.2,
+
+              repeat:
+                Infinity,
+
+              ease:
+                'easeInOut',
+            }}
+
             className="
               flex
               h-12
@@ -1544,7 +1655,7 @@ const CountryDetailCard = ({
                 17
               }
             />
-          </span>
+          </motion.span>
         </div>
 
         <p
@@ -1802,8 +1913,17 @@ const InteractiveGlobe = ({
       false
     );
 
-  const tooltipRef =
-    useRef(null);
+  const [
+    pointer,
+    setPointer,
+  ] =
+    useState({
+      x:
+        0,
+
+      y:
+        0,
+    });
 
   const activeCountry =
     countries.find(
@@ -1858,20 +1978,20 @@ const InteractiveGlobe = ({
     (
       event
     ) => {
-      if (!tooltipRef.current) {
-        return;
-      }
-
       const rect =
         event
           .currentTarget
           .getBoundingClientRect();
 
-      tooltipRef.current.style.left =
-        `${event.clientX - rect.left + 16}px`;
+      setPointer({
+        x:
+          event.clientX -
+          rect.left,
 
-      tooltipRef.current.style.top =
-        `${event.clientY - rect.top + 16}px`;
+        y:
+          event.clientY -
+          rect.top,
+      });
     };
 
   return (
@@ -1920,12 +2040,11 @@ const InteractiveGlobe = ({
         relative
         mx-auto
         max-w-7xl
-        [content-visibility:auto]
-        [contain-intrinsic-size:900px]
       "
     >
-      <div
+      <motion.div
         aria-hidden="true"
+
         className="
           absolute
           -inset-[1px]
@@ -1934,8 +2053,34 @@ const InteractiveGlobe = ({
           from-blue-600
           via-cyan-400
           to-violet-600
-          opacity-65
+          opacity-70
+          blur-[1px]
+          [background-size:240%_240%]
         "
+
+        animate={
+          reducedMotion
+            ? undefined
+            : {
+                backgroundPosition:
+                  [
+                    '0% 50%',
+                    '100% 50%',
+                    '0% 50%',
+                  ],
+              }
+        }
+
+        transition={{
+          duration:
+            11,
+
+          repeat:
+            Infinity,
+
+          ease:
+            'linear',
+        }}
       />
 
       <div
@@ -1944,7 +2089,7 @@ const InteractiveGlobe = ({
           overflow-hidden
           rounded-[2.6rem]
           bg-[#020617]
-          shadow-[0_24px_70px_rgba(2,6,23,0.38)]
+          shadow-[0_40px_150px_rgba(2,6,23,0.48)]
         "
       >
         <div
@@ -1980,7 +2125,7 @@ const InteractiveGlobe = ({
             bg-white/[0.035]
             px-5
             py-4
-
+            backdrop-blur-xl
 
             sm:flex-row
             sm:items-center
@@ -2093,7 +2238,25 @@ const InteractiveGlobe = ({
                   w-1.5
                 "
               >
-<span
+                {
+                  !reducedMotion &&
+                  (
+                    <span
+                      className="
+                        absolute
+                        inline-flex
+                        h-full
+                        w-full
+                        animate-ping
+                        rounded-full
+                        bg-emerald-300
+                        opacity-60
+                      "
+                    />
+                  )
+                }
+
+                <span
                   className="
                     relative
                     h-1.5
@@ -2187,13 +2350,14 @@ const InteractiveGlobe = ({
                   1200,
               }}
 
-              frameloop="demand"
-
-              dpr={1}
+              dpr={[
+                1,
+                1.25,
+              ]}
 
               gl={{
                 antialias:
-                  false,
+                  true,
 
                 alpha:
                   true,
@@ -2304,7 +2468,7 @@ const InteractiveGlobe = ({
                       items-center
                       justify-center
                       bg-[#020617]/75
-
+                      backdrop-blur-sm
                     "
                   >
                     <div
@@ -2312,12 +2476,31 @@ const InteractiveGlobe = ({
                         text-center
                       "
                     >
-                      <div
+                      <motion.div
+                        animate={
+                          reducedMotion
+                            ? undefined
+                            : {
+                                rotate:
+                                  360,
+                              }
+                        }
+
+                        transition={{
+                          duration:
+                            2.2,
+
+                          repeat:
+                            Infinity,
+
+                          ease:
+                            'linear',
+                        }}
+
                         className="
                           mx-auto
                           flex
                           h-14
-                          animate-spin
                           w-14
                           items-center
                           justify-center
@@ -2334,7 +2517,7 @@ const InteractiveGlobe = ({
                             19
                           }
                         />
-                      </div>
+                      </motion.div>
 
                       <p
                         className="
@@ -2394,7 +2577,7 @@ const InteractiveGlobe = ({
                     border-amber-300/20
                     bg-amber-300/[0.08]
                     p-4
-        
+                    backdrop-blur-xl
 
                     sm:left-6
                     sm:right-auto
@@ -2482,9 +2665,15 @@ const InteractiveGlobe = ({
                         0.16,
                     }}
 
-                    ref={
-                      tooltipRef
-                    }
+                    style={{
+                      left:
+                        pointer.x +
+                        16,
+
+                      top:
+                        pointer.y +
+                        16,
+                    }}
 
                     className="
                       pointer-events-none
@@ -2502,7 +2691,7 @@ const InteractiveGlobe = ({
                       font-bold
                       text-white
                       shadow-2xl
-          
+                      backdrop-blur-xl
 
                       md:block
                     "
@@ -2547,7 +2736,7 @@ const InteractiveGlobe = ({
                   uppercase
                   tracking-[0.11em]
                   text-white/70
-      
+                  backdrop-blur-xl
                 "
               >
                 ↔{' '}
@@ -2570,7 +2759,7 @@ const InteractiveGlobe = ({
                   uppercase
                   tracking-[0.11em]
                   text-white/70
-      
+                  backdrop-blur-xl
 
                   sm:inline-flex
                 "
@@ -2635,7 +2824,7 @@ const InteractiveGlobe = ({
                 w-72
                 rounded-full
                 bg-violet-500/10
-                blur-[70px]
+                blur-[105px]
               "
             />
 
