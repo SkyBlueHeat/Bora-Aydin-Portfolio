@@ -334,22 +334,22 @@ const Hero = () => {
 
   const techTags = [
     {
-      label: 'React',
+      label: 'Python',
       className: '-left-8 top-[17%]',
       delay: 0,
     },
     {
-      label: 'TypeScript',
+      label: 'FastAPI',
       className: '-right-8 top-[28%]',
       delay: 0.35,
     },
     {
-      label: 'Node.js',
+      label: 'React',
       className: '-left-10 bottom-[26%]',
       delay: 0.7,
     },
     {
-      label: 'Vue',
+      label: 'TypeScript',
       className: '-right-6 bottom-[15%]',
       delay: 1.05,
     },
@@ -1202,7 +1202,6 @@ const Hero = () => {
                   alt={currentLabels.portraitAlt}
                   loading="eager"
                   decoding="async"
-                  fetchPriority="high"
                   className="
                     relative
                     aspect-[4/5]

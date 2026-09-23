@@ -2,11 +2,11 @@
   "en": {
     "hero": {
       "name": "Bora Aydin",
-      "title": "Frontend / Full-Stack Software Developer",
-      "description": "Building reliable product experiences with React, TypeScript, APIs, automated testing, and performance in mind.",
-     "location": "Based in Ankara, Turkey · Open to U.S. relocation",
-"opportunities": "Open to full-time software development roles and J-1 Trainee opportunities",
-"experience": "Professional software development experience + independent end-to-end product development",
+      "title": "Software Engineer — Full-Stack & Product Engineering",
+      "description": "Full-stack product development with Python, FastAPI, React, TypeScript, REST APIs, testing, Docker, and end-to-end ownership.",
+      "location": "Based in Ankara, Turkey · Open to U.S. relocation",
+      "opportunities": "Open to full-time software engineering roles and U.S. relocation",
+      "experience": "Professional software development experience + independent end-to-end product engineering",
       "viewProjects": "View Projects",
       "downloadResume": "Download Resume"
     },
@@ -40,7 +40,7 @@
       "title": "Engineering Journey",
       "subtitle": "From foundation to product engineering",
       "howIGrew": "How I Grew as a Developer",
-      "howIGrewText": "My education gave me a foundation. Professional experience taught me how software is built in the real world. Self-directed learning helped me continue growing beyond formal education. Workintech strengthened and modernized my full-stack skills. Independent projects pushed me into deeper product, backend, testing, and performance work. AI-assisted tools such as Cursor and Windsurf are the newest stage in a longer pattern of adapting to new technologies and improving how I work.",
+      "howIGrewText": "My education gave me a foundation. Professional experience taught me how software is built in the real world. Self-directed learning helped me continue growing beyond formal education. Workintech strengthened and modernized my full-stack skills. Independent projects pushed me into deeper product, backend, testing, and performance work. Modern development tools are the newest stage in a longer pattern of adapting to new technologies and improving how I work.",
       "formalFoundation": "Formal Programming Foundation",
       "formalFoundationText": "Ufuk University introduced me to computer programming fundamentals, problem-solving, and software development concepts.",
       "firstProfessional": "First Professional Steps — CERS Software",
@@ -139,11 +139,11 @@
   "tr": {
     "hero": {
       "name": "Bora Aydin",
-      "title": "Frontend / Full-Stack Yazılım Geliştirici",
-      "description": "React, TypeScript, API'ler, otomatik test ve performans göz önünde bulundurarak güvenilir ürün deneyimleri geliştiriyorum.",
-     "location": "Ankara, Türkiye'de yaşıyorum · ABD'ye taşınmaya açığım",
-"opportunities": "Tam zamanlı yazılım geliştirme pozisyonlarına ve J-1 Trainee fırsatlarına açığım",
-"experience": "Profesyonel yazılım geliştirme deneyimi + bağımsız uçtan uca ürün geliştirme",
+      "title": "Yazılım Mühendisi — Full-Stack & Ürün Mühendisliği",
+      "description": "Python, FastAPI, React, TypeScript, REST API'ler, test, Docker ve uçtan uca sahiplik ile full-stack ürün geliştirme.",
+      "location": "Ankara, Türkiye'de yaşıyorum · ABD'ye taşınmaya açığım",
+      "opportunities": "Tam zamanlı yazılım mühendisliği rollerine ve ABD'ye taşınmaya açığım",
+      "experience": "Profesyonel yazılım geliştirme deneyimi + bağımsız uçtan uca ürün mühendisliği",
       "viewProjects": "Projeleri Gör",
       "downloadResume": "Özgeçmiş İndir"
     },
@@ -273,11 +273,11 @@
   "de": {
     "hero": {
       "name": "Bora Aydin",
-      "title": "Frontend / Full-Stack Software-Entwickler",
-      "description": "Zuverlässige Produkterfahrungen mit React, TypeScript, APIs, automatisiertem Testing und Leistung im Fokus entwickeln.",
-     "location": "Wohnhaft in Ankara, Türkei · Offen für einen Umzug in die USA",
-"opportunities": "Offen für Vollzeitstellen in der Softwareentwicklung und J-1-Trainee-Möglichkeiten",
-"experience": "Berufserfahrung in der Softwareentwicklung + eigenständige End-to-End-Produktentwicklung",
+      "title": "Software-Ingenieur — Full-Stack & Produkt-Ingenieurwesen",
+      "description": "Full-Stack-Produktentwicklung mit Python, FastAPI, React, TypeScript, REST-APIs, Tests, Docker und End-to-End-Verantwortung.",
+      "location": "Wohnhaft in Ankara, Türkei · Offen für einen Umzug in die USA",
+      "opportunities": "Offen für Vollzeitpositionen als Software-Ingenieur und Umzug in die USA",
+      "experience": "Berufserfahrung in der Softwareentwicklung + eigenständige End-to-End-Produktentwicklung",
       "viewProjects": "Projekte Anzeigen",
       "downloadResume": "Lebenslauf Herunterladen"
     },

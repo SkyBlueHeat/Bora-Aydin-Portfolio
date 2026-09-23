@@ -2483,34 +2483,6 @@ const EngineeringCaseStudies = () => {
   const caseStudiesData = {
     en: [
       {
-        id: 'aviora-performance',
-        title: 'Aviora Performance Optimization',
-        subtitle: 'Achieving 94–98 Lighthouse Performance Score',
-        problem:
-          'Initial performance measurements showed suboptimal Core Web Vitals, particularly on mobile devices where users needed fast access to their job application data.',
-        approach: [
-          'Analyzed bundle composition and identified heavy dependencies',
-          'Implemented code splitting and lazy loading for route components',
-          'Optimized image assets with responsive formats and lazy loading',
-          'Reduced JavaScript execution time through component optimization',
-          'Minimized layout shifts with proper dimension attributes',
-          'Implemented efficient state management to reduce re-renders',
-        ],
-        results: [
-          'Mobile Lighthouse Performance: 94–98',
-          'Largest Contentful Paint (LCP): 1.9–2.3 seconds',
-          'Total Blocking Time (TBT): 26–98 ms',
-          'Consistent performance across 6 geographic regions',
-        ],
-        tools: [
-          'Lighthouse',
-          'Chrome DevTools',
-          'Webpack Bundle Analyzer',
-          'Playwright',
-        ],
-      },
-
-      {
         id: 'payment-risk',
         title: 'Payment Risk Architecture',
         subtitle: 'Deterministic Rule Engine for AI Agent Security',
@@ -2543,6 +2515,34 @@ const EngineeringCaseStudies = () => {
       },
 
       {
+        id: 'aviora-performance',
+        title: 'Aviora Performance Optimization',
+        subtitle: 'Achieving 94–98 Lighthouse Performance Score',
+        problem:
+          'Initial performance measurements showed suboptimal Core Web Vitals, particularly on mobile devices where users needed fast access to their job application data.',
+        approach: [
+          'Analyzed bundle composition and identified heavy dependencies',
+          'Implemented code splitting and lazy loading for route components',
+          'Optimized image assets with responsive formats and lazy loading',
+          'Reduced JavaScript execution time through component optimization',
+          'Minimized layout shifts with proper dimension attributes',
+          'Implemented efficient state management to reduce re-renders',
+        ],
+        results: [
+          'Mobile Lighthouse Performance: 94–98',
+          'Largest Contentful Paint (LCP): 1.9–2.3 seconds',
+          'Total Blocking Time (TBT): 26–98 ms',
+          'Consistent performance across 6 geographic regions',
+        ],
+        tools: [
+          'Lighthouse',
+          'Chrome DevTools',
+          'Webpack Bundle Analyzer',
+          'Playwright',
+        ],
+      },
+
+      {
         id: 'motion-components',
         title: 'Reusable Typed Motion Components',
         subtitle: 'Type-Safe Motion Design System with Remotion',
@@ -2569,34 +2569,6 @@ const EngineeringCaseStudies = () => {
     ],
 
     tr: [
-      {
-        id: 'aviora-performance',
-        title: 'Aviora Performans Optimizasyonu',
-        subtitle: '94–98 Lighthouse Performans Skoruna Ulaşma',
-        problem:
-          'İlk performans ölçümleri, özellikle kullanıcıların iş başvurusu verilerine hızlı erişmesi gereken mobil cihazlarda Core Web Vitals değerlerinin iyileştirilebileceğini gösterdi.',
-        approach: [
-          'Bundle yapısını analiz ederek ağır bağımlılıkları belirledim',
-          'Route bileşenleri için code splitting ve lazy loading uyguladım',
-          'Görselleri responsive formatlar ve lazy loading ile optimize ettim',
-          'Bileşen optimizasyonlarıyla JavaScript çalışma süresini azalttım',
-          'Doğru boyut tanımlarıyla layout shift etkisini azalttım',
-          'Gereksiz yeniden render işlemlerini azaltmak için state yönetimini optimize ettim',
-        ],
-        results: [
-          'Mobil Lighthouse Performansı: 94–98',
-          'Largest Contentful Paint (LCP): 1.9–2.3 saniye',
-          'Total Blocking Time (TBT): 26–98 ms',
-          '6 farklı coğrafi bölgede tutarlı performans',
-        ],
-        tools: [
-          'Lighthouse',
-          'Chrome DevTools',
-          'Webpack Bundle Analyzer',
-          'Playwright',
-        ],
-      },
-
       {
         id: 'payment-risk',
         title: 'Ödeme Riski Mimarisi',
@@ -2630,6 +2602,34 @@ const EngineeringCaseStudies = () => {
       },
 
       {
+        id: 'aviora-performance',
+        title: 'Aviora Performans Optimizasyonu',
+        subtitle: '94–98 Lighthouse Performans Skoruna Ulaşma',
+        problem:
+          'İlk performans ölçümleri, özellikle kullanıcıların iş başvurusu verilerine hızlı erişmesi gereken mobil cihazlarda Core Web Vitals değerlerinin iyileştirilebileceğini gösterdi.',
+        approach: [
+          'Bundle yapısını analiz ederek ağır bağımlılıkları belirledim',
+          'Route bileşenleri için code splitting ve lazy loading uyguladım',
+          'Görselleri responsive formatlar ve lazy loading ile optimize ettim',
+          'Bileşen optimizasyonlarıyla JavaScript çalışma süresini azalttım',
+          'Doğru boyut tanımlarıyla layout shift etkisini azalttım',
+          'Gereksiz yeniden render işlemlerini azaltmak için state yönetimini optimize ettim',
+        ],
+        results: [
+          'Mobil Lighthouse Performansı: 94–98',
+          'Largest Contentful Paint (LCP): 1.9–2.3 saniye',
+          'Total Blocking Time (TBT): 26–98 ms',
+          '6 farklı coğrafi bölgede tutarlı performans',
+        ],
+        tools: [
+          'Lighthouse',
+          'Chrome DevTools',
+          'Webpack Bundle Analyzer',
+          'Playwright',
+        ],
+      },
+
+      {
         id: 'motion-components',
         title: 'Yeniden Kullanılabilir Tip Güvenli Motion Bileşenleri',
         subtitle: 'Remotion ile Type-Safe Motion Design Sistemi',
@@ -2656,34 +2656,6 @@ const EngineeringCaseStudies = () => {
     ],
 
     de: [
-      {
-        id: 'aviora-performance',
-        title: 'Aviora Performance-Optimierung',
-        subtitle: 'Lighthouse-Performance-Score von 94–98',
-        problem:
-          'Die ersten Performance-Messungen zeigten Verbesserungspotenzial bei den Core Web Vitals, insbesondere auf mobilen Geräten, auf denen Nutzer schnell auf ihre Bewerbungsdaten zugreifen müssen.',
-        approach: [
-          'Bundle-Zusammensetzung analysiert und umfangreiche Abhängigkeiten identifiziert',
-          'Code-Splitting und Lazy Loading für Route-Komponenten implementiert',
-          'Bildressourcen mit responsiven Formaten und Lazy Loading optimiert',
-          'JavaScript-Ausführungszeit durch Komponentenoptimierung reduziert',
-          'Layout-Verschiebungen durch korrekt definierte Abmessungen minimiert',
-          'State-Management optimiert, um unnötige Re-Renders zu reduzieren',
-        ],
-        results: [
-          'Mobile Lighthouse Performance: 94–98',
-          'Largest Contentful Paint (LCP): 1,9–2,3 Sekunden',
-          'Total Blocking Time (TBT): 26–98 ms',
-          'Konsistente Performance in 6 geografischen Regionen',
-        ],
-        tools: [
-          'Lighthouse',
-          'Chrome DevTools',
-          'Webpack Bundle Analyzer',
-          'Playwright',
-        ],
-      },
-
       {
         id: 'payment-risk',
         title: 'Architektur für Zahlungsrisiken',
@@ -2714,6 +2686,34 @@ const EngineeringCaseStudies = () => {
           'pytest',
           'Docker',
           'asyncio',
+        ],
+      },
+
+      {
+        id: 'aviora-performance',
+        title: 'Aviora Performance-Optimierung',
+        subtitle: 'Lighthouse-Performance-Score von 94–98',
+        problem:
+          'Die ersten Performance-Messungen zeigten Verbesserungspotenzial bei den Core Web Vitals, insbesondere auf mobilen Geräten, auf denen Nutzer schnell auf ihre Bewerbungsdaten zugreifen müssen.',
+        approach: [
+          'Bundle-Zusammensetzung analysiert und umfangreiche Abhängigkeiten identifiziert',
+          'Code-Splitting und Lazy Loading für Route-Komponenten implementiert',
+          'Bildressourcen mit responsiven Formaten und Lazy Loading optimiert',
+          'JavaScript-Ausführungszeit durch Komponentenoptimierung reduziert',
+          'Layout-Verschiebungen durch korrekt definierte Abmessungen minimiert',
+          'State-Management optimiert, um unnötige Re-Renders zu reduzieren',
+        ],
+        results: [
+          'Mobile Lighthouse Performance: 94–98',
+          'Largest Contentful Paint (LCP): 1,9–2,3 Sekunden',
+          'Total Blocking Time (TBT): 26–98 ms',
+          'Konsistente Performance in 6 geografischen Regionen',
+        ],
+        tools: [
+          'Lighthouse',
+          'Chrome DevTools',
+          'Webpack Bundle Analyzer',
+          'Playwright',
         ],
       },
 

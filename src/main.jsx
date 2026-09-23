@@ -22,12 +22,12 @@ const App = () => {
     <>
       <NavBar />
       <Hero />
-      <Education />
-      <EngineeringJourney />
-      <Experience />
       <FeaturedProjects />
+      <Experience />
       <Skills />
       <EngineeringCaseStudies />
+      <Education />
+      <EngineeringJourney />
       <ModernEngineering />
       <J1Section />
       <Footer />

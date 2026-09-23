@@ -1328,58 +1328,6 @@ const FeaturedProjects = () => {
   const projectsData = {
     en: [
       {
-        id: 'aviora',
-        name: 'Aviora',
-        category: 'Career Management Platform',
-        title: 'Aviora — Career Management Platform',
-
-        description:
-          'A career-management platform designed to bring job applications, interviews, analytics, and follow-up workflows into one organized product experience.',
-
-        problem:
-          'Job seekers often manage applications across multiple platforms, making applications, interviews, and follow-ups difficult to track in one place.',
-
-        solution:
-          'Built a comprehensive career management platform with application tracking, Kanban workflows, analytics, and interview preparation tools.',
-
-        ownership: [
-          'Product architecture',
-          'Frontend development',
-          'Python utilities',
-          'Testing strategy',
-          'Performance optimization',
-        ],
-
-        contributions: [
-          'Designed and developed the product independently as a full-stack application',
-          'Built reusable UI architecture with React and TypeScript',
-          'Implemented application workflows with Kanban state management',
-          'Added automated testing with Playwright and Vitest',
-          'Implemented accessibility-conscious UI states',
-          'Performed performance profiling and optimization',
-        ],
-
-        technologies: [
-          'React',
-          'TypeScript',
-          'Python',
-          'PyWebView',
-          'Playwright',
-          'Vitest',
-        ],
-
-        metrics: [
-          'Mobile Lighthouse Performance: 94–98',
-          'Largest Contentful Paint (LCP): 1.9–2.3 seconds',
-          'Total Blocking Time (TBT): 26–98 ms',
-          'Measured across 6 geographic regions',
-        ],
-
-        github: 'https://github.com/SkyBlueHeat/Aviora-Showcase',
-        live: 'https://aviora-eight.vercel.app/',
-      },
-
-      {
         id: 'agent-evidence',
         name: 'Agent Evidence',
         category: 'AI Agent Payment Security Lab',
@@ -1437,6 +1385,58 @@ const FeaturedProjects = () => {
 
         github: 'https://github.com/SkyBlueHeat',
         live: null,
+      },
+
+      {
+        id: 'aviora',
+        name: 'Aviora',
+        category: 'Career Management Platform',
+        title: 'Aviora — Career Management Platform',
+
+        description:
+          'A career-management platform designed to bring job applications, interviews, analytics, and follow-up workflows into one organized product experience.',
+
+        problem:
+          'Job seekers often manage applications across multiple platforms, making applications, interviews, and follow-ups difficult to track in one place.',
+
+        solution:
+          'Built a comprehensive career management platform with application tracking, Kanban workflows, analytics, and interview preparation tools.',
+
+        ownership: [
+          'Product architecture',
+          'Frontend development',
+          'Python utilities',
+          'Testing strategy',
+          'Performance optimization',
+        ],
+
+        contributions: [
+          'Designed and developed the product independently as a full-stack application',
+          'Built reusable UI architecture with React and TypeScript',
+          'Implemented application workflows with Kanban state management',
+          'Added automated testing with Playwright and Vitest',
+          'Implemented accessibility-conscious UI states',
+          'Performed performance profiling and optimization',
+        ],
+
+        technologies: [
+          'React',
+          'TypeScript',
+          'Python',
+          'PyWebView',
+          'Playwright',
+          'Vitest',
+        ],
+
+        metrics: [
+          'Mobile Lighthouse Performance: 94–98',
+          'Largest Contentful Paint (LCP): 1.9–2.3 seconds',
+          'Total Blocking Time (TBT): 26–98 ms',
+          'Measured across 6 geographic regions',
+        ],
+
+        github: 'https://github.com/SkyBlueHeat/Aviora-Showcase',
+        live: 'https://aviora-eight.vercel.app/',
       },
 
       {
@@ -1499,58 +1499,6 @@ const FeaturedProjects = () => {
 
     tr: [
       {
-        id: 'aviora',
-        name: 'Aviora',
-        category: 'Kariyer Yönetim Platformu',
-        title: 'Aviora — Kariyer Yönetim Platformu',
-
-        description:
-          'İş başvurularını, mülakatları, analizleri ve takip süreçlerini tek bir düzenli ürün deneyiminde bir araya getiren kariyer yönetim platformu.',
-
-        problem:
-          'İş arayanlar başvurularını birden fazla platform üzerinden takip etmek zorunda kaldığı için başvuru, mülakat ve takip süreçlerini tek yerde yönetmek zorlaşabiliyor.',
-
-        solution:
-          'Başvuru takibi, Kanban workflow’ları, analizler ve mülakat hazırlık araçlarını içeren kapsamlı bir kariyer yönetim platformu geliştirdim.',
-
-        ownership: [
-          'Ürün mimarisi',
-          'Frontend geliştirme',
-          'Python araçları',
-          'Test stratejisi',
-          'Performans optimizasyonu',
-        ],
-
-        contributions: [
-          'Ürünü bağımsız olarak full-stack bir uygulama şeklinde tasarlayıp geliştirdim',
-          'React ve TypeScript ile yeniden kullanılabilir UI mimarisi oluşturdum',
-          'Kanban durum yönetimiyle başvuru workflow’ları geliştirdim',
-          'Playwright ve Vitest ile otomatik testler ekledim',
-          'Erişilebilirliği dikkate alan UI durumları geliştirdim',
-          'Performans profilleme ve optimizasyon çalışmaları gerçekleştirdim',
-        ],
-
-        technologies: [
-          'React',
-          'TypeScript',
-          'Python',
-          'PyWebView',
-          'Playwright',
-          'Vitest',
-        ],
-
-        metrics: [
-          'Mobil Lighthouse Performansı: 94–98',
-          'Largest Contentful Paint (LCP): 1.9–2.3 saniye',
-          'Total Blocking Time (TBT): 26–98 ms',
-          '6 farklı coğrafi bölgede ölçüldü',
-        ],
-
-        github: 'https://github.com/SkyBlueHeat/Aviora-Showcase',
-        live: 'https://aviora-eight.vercel.app/',
-      },
-
-      {
         id: 'agent-evidence',
         name: 'Agent Evidence',
         category: 'AI Agent Ödeme Güvenliği Laboratuvarı',
@@ -1608,6 +1556,58 @@ const FeaturedProjects = () => {
 
         github: 'https://github.com/SkyBlueHeat',
         live: null,
+      },
+
+      {
+        id: 'aviora',
+        name: 'Aviora',
+        category: 'Kariyer Yönetim Platformu',
+        title: 'Aviora — Kariyer Yönetim Platformu',
+
+        description:
+          'İş başvurularını, mülakatları, analizleri ve takip süreçlerini tek bir düzenli ürün deneyiminde bir araya getiren kariyer yönetim platformu.',
+
+        problem:
+          'İş arayanlar başvurularını birden fazla platform üzerinden takip etmek zorunda kaldığı için başvuru, mülakat ve takip süreçlerini tek yerde yönetmek zorlaşabiliyor.',
+
+        solution:
+          'Başvuru takibi, Kanban workflow’ları, analizler ve mülakat hazırlık araçlarını içeren kapsamlı bir kariyer yönetim platformu geliştirdim.',
+
+        ownership: [
+          'Ürün mimarisi',
+          'Frontend geliştirme',
+          'Python araçları',
+          'Test stratejisi',
+          'Performans optimizasyonu',
+        ],
+
+        contributions: [
+          'Ürünü bağımsız olarak full-stack bir uygulama şeklinde tasarlayıp geliştirdim',
+          'React ve TypeScript ile yeniden kullanılabilir UI mimarisi oluşturdum',
+          'Kanban durum yönetimiyle başvuru workflow’ları geliştirdim',
+          'Playwright ve Vitest ile otomatik testler ekledim',
+          'Erişilebilirliği dikkate alan UI durumları geliştirdim',
+          'Performans profilleme ve optimizasyon çalışmaları gerçekleştirdim',
+        ],
+
+        technologies: [
+          'React',
+          'TypeScript',
+          'Python',
+          'PyWebView',
+          'Playwright',
+          'Vitest',
+        ],
+
+        metrics: [
+          'Mobil Lighthouse Performansı: 94–98',
+          'Largest Contentful Paint (LCP): 1.9–2.3 saniye',
+          'Total Blocking Time (TBT): 26–98 ms',
+          '6 farklı coğrafi bölgede ölçüldü',
+        ],
+
+        github: 'https://github.com/SkyBlueHeat/Aviora-Showcase',
+        live: 'https://aviora-eight.vercel.app/',
       },
 
       {
@@ -1670,58 +1670,6 @@ const FeaturedProjects = () => {
 
     de: [
       {
-        id: 'aviora',
-        name: 'Aviora',
-        category: 'Karriere-Management-Plattform',
-        title: 'Aviora — Karriere-Management-Plattform',
-
-        description:
-          'Eine Karriere-Management-Plattform, die Bewerbungen, Vorstellungsgespräche, Analysen und Follow-up-Prozesse in einem strukturierten Produkt zusammenführt.',
-
-        problem:
-          'Bewerber verwalten ihre Bewerbungen häufig über mehrere Plattformen, wodurch Bewerbungen, Interviews und Follow-ups nur schwer an einem zentralen Ort nachverfolgt werden können.',
-
-        solution:
-          'Entwicklung einer umfassenden Karriere-Management-Plattform mit Bewerbungstracking, Kanban-Workflows, Analysen und Werkzeugen zur Interviewvorbereitung.',
-
-        ownership: [
-          'Produktarchitektur',
-          'Frontend-Entwicklung',
-          'Python-Werkzeuge',
-          'Teststrategie',
-          'Performance-Optimierung',
-        ],
-
-        contributions: [
-          'Das Produkt eigenständig als Full-Stack-Anwendung konzipiert und entwickelt',
-          'Wiederverwendbare UI-Architektur mit React und TypeScript entwickelt',
-          'Bewerbungs-Workflows mit Kanban-State-Management implementiert',
-          'Automatisierte Tests mit Playwright und Vitest hinzugefügt',
-          'Barrierebewusste UI-Zustände implementiert',
-          'Performance-Profiling und Optimierungen durchgeführt',
-        ],
-
-        technologies: [
-          'React',
-          'TypeScript',
-          'Python',
-          'PyWebView',
-          'Playwright',
-          'Vitest',
-        ],
-
-        metrics: [
-          'Mobile Lighthouse Performance: 94–98',
-          'Largest Contentful Paint (LCP): 1,9–2,3 Sekunden',
-          'Total Blocking Time (TBT): 26–98 ms',
-          'Messungen in 6 geografischen Regionen',
-        ],
-
-        github: 'https://github.com/SkyBlueHeat/Aviora-Showcase',
-        live: 'https://aviora-eight.vercel.app/',
-      },
-
-      {
         id: 'agent-evidence',
         name: 'Agent Evidence',
         category: 'Labor für KI-Agenten-Zahlungssicherheit',
@@ -1779,6 +1727,58 @@ const FeaturedProjects = () => {
 
         github: 'https://github.com/SkyBlueHeat',
         live: null,
+      },
+
+      {
+        id: 'aviora',
+        name: 'Aviora',
+        category: 'Karriere-Management-Plattform',
+        title: 'Aviora — Karriere-Management-Plattform',
+
+        description:
+          'Eine Karriere-Management-Plattform, die Bewerbungen, Vorstellungsgespräche, Analysen und Follow-up-Prozesse in einem strukturierten Produkt zusammenführt.',
+
+        problem:
+          'Bewerber verwalten ihre Bewerbungen häufig über mehrere Plattformen, wodurch Bewerbungen, Interviews und Follow-ups nur schwer an einem zentralen Ort nachverfolgt werden können.',
+
+        solution:
+          'Entwicklung einer umfassenden Karriere-Management-Plattform mit Bewerbungstracking, Kanban-Workflows, Analysen und Werkzeugen zur Interviewvorbereitung.',
+
+        ownership: [
+          'Produktarchitektur',
+          'Frontend-Entwicklung',
+          'Python-Werkzeuge',
+          'Teststrategie',
+          'Performance-Optimierung',
+        ],
+
+        contributions: [
+          'Das Produkt eigenständig als Full-Stack-Anwendung konzipiert und entwickelt',
+          'Wiederverwendbare UI-Architektur mit React und TypeScript entwickelt',
+          'Bewerbungs-Workflows mit Kanban-State-Management implementiert',
+          'Automatisierte Tests mit Playwright und Vitest hinzugefügt',
+          'Barrierebewusste UI-Zustände implementiert',
+          'Performance-Profiling und Optimierungen durchgeführt',
+        ],
+
+        technologies: [
+          'React',
+          'TypeScript',
+          'Python',
+          'PyWebView',
+          'Playwright',
+          'Vitest',
+        ],
+
+        metrics: [
+          'Mobile Lighthouse Performance: 94–98',
+          'Largest Contentful Paint (LCP): 1,9–2,3 Sekunden',
+          'Total Blocking Time (TBT): 26–98 ms',
+          'Messungen in 6 geografischen Regionen',
+        ],
+
+        github: 'https://github.com/SkyBlueHeat/Aviora-Showcase',
+        live: 'https://aviora-eight.vercel.app/',
       },
 
       {

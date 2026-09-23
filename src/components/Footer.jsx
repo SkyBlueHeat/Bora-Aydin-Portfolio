@@ -63,7 +63,7 @@ const Footer = () => {
         'Let’s Build Something Meaningful',
 
       contactText:
-        'Open to full-time software development roles, international opportunities, J-1 Trainee pathways, and conversations about software engineering projects or collaboration.',
+        'Open to full-time software engineering roles, U.S. relocation opportunities, and conversations with product-focused engineering teams.',
 
       available:
         'Available for opportunities',
@@ -96,7 +96,7 @@ const Footer = () => {
         'LinkedIn profile',
 
       j1:
-        'U.S. Opportunities',
+        'Relocation',
 
       portfolio:
         'Software Engineering Portfolio',
@@ -116,7 +116,7 @@ const Footer = () => {
         'Birlikte Değerli Bir Şey Geliştirelim',
 
       contactText:
-        'Tam zamanlı yazılım geliştirme pozisyonlarına, uluslararası fırsatlara, J-1 Trainee yollarına ve yazılım mühendisliği projeleri veya iş birlikleri hakkında görüşmelere açığım.',
+        'Tam zamanlı yazılım mühendisliği rollerine, ABD\'ye taşınma fırsatlarına ve ürün odaklı mühendislik ekipleriyle görüşmelere açığım.',
 
       available:
         'Fırsatlara açık',
@@ -149,7 +149,7 @@ const Footer = () => {
         'LinkedIn profili',
 
       j1:
-        'ABD Fırsatları',
+        'Taşınma',
 
       portfolio:
         'Yazılım Mühendisliği Portfolyosu',
@@ -169,7 +169,7 @@ const Footer = () => {
         'Lassen Sie uns etwas Bedeutungsvolles entwickeln',
 
       contactText:
-        'Offen für Vollzeitstellen in der Softwareentwicklung, internationale Möglichkeiten, J-1-Trainee-Wege sowie Gespräche über Softwareprojekte und Zusammenarbeit.',
+        'Offen für Vollzeitpositionen als Software-Ingenieur, Umzug in die USA und Gespräche mit produktorientierten Ingenieurteams.',
 
       available:
         'Offen für Möglichkeiten',
@@ -202,7 +202,7 @@ const Footer = () => {
         'LinkedIn-Profil',
 
       j1:
-        'Möglichkeiten in den USA',
+        'Umzug',
 
       portfolio:
         'Software-Engineering-Portfolio',
@@ -270,7 +270,7 @@ const Footer = () => {
       name:
         currentLabels.j1,
       href:
-        '#j1',
+        '#opportunities',
     },
   ];
 
